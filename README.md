@@ -6,8 +6,8 @@
 
 ### Integrantes
 
-* Alumno 01 (Rol)
-* Alumno 02 (Rol)
+* Sebastian Cortes Blamey (Programador)
+* Felipe Guerra Blamey (Programador)
 
 ### Bitácora
 
