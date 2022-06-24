@@ -36,34 +36,36 @@ vector<Persona> Detector::detect(InputArray img, ListaEnlazada* lista)
             Rect &r = *i;
             Persona p(r);
             personas.push_back(p);
-        }
-        bool iguales= false;
 
-        // ListaEnlazada
-        Nodo* current = lista->getFirst();
-        if(current == NULL)
-        {
-            lista->anadir(resizedDown.clone(),0,0);
-        }
-        else
-        {
-            while(current != NULL)
+            bool iguales= false;
+
+            // ListaEnlazada
+            Nodo* current = lista->getFirst();
+            if(current == NULL)
             {
-                double dist = norm(resizedDown, current->getImg(), NORM_L2);
-                cout << "Distancia: "<< dist<< endl;
-                if(dist<0.0)
+                lista->anadir(resizedDown.clone(),0,0);
+            }
+            else
+            {
+                while(current != NULL)
                 {
-                    iguales = true;
-                    current->setVeces(current->getVeces() + 1);
-                    break;
+                    double dist = norm(resizedDown, current->getImg(), NORM_L2);
+                    cout << "Distancia: "<< dist<< endl;
+                    if(dist<0.0)
+                    {
+                        iguales = true;
+                        current->setVeces(current->getVeces() + 1);
+                        break;
+                    }
+                    current = current->getNext();
                 }
-                current = current->getNext();
+            }
+            if(iguales!=true)
+            {
+                lista->anadir(resizedDown.clone(),0,0);
             }
         }
-        if(iguales!=true)
-        {
-            lista->anadir(resizedDown.clone(),0,0);
-        }
+        
         return personas;
 }
 

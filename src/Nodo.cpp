@@ -3,6 +3,7 @@
 
 Nodo::Nodo(Mat frame, int n, int num)
 {
+    //std::cout<< "Se ha agregado un nodo" <<endl;
     img = frame;
     next = NULL;
     l = NULL;

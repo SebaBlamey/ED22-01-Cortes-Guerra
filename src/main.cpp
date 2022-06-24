@@ -17,7 +17,7 @@ int main(int argc, char** argv)
 {
     Detector detector;
     Mat frame;
-    string framePath = "/home/seba/Documentos/opencv/images/personas.png";
+    string framePath = "/home/seba/Documentos/opencv/images/image1680.png";
     frame = imread(framePath);
     detector.toggleMode();
     //cout << detector.modeName() << endl;
@@ -32,7 +32,7 @@ int main(int argc, char** argv)
         vector<Persona> found = detector.detect(frame, nuevaLista);
         int numeroPersona = 1;
         Nodo* current = nuevaLista->getFirst();
-        //cout << "Cantidad de personas detectadas [ "<< found.begin() - found.end() <<" ]"<<endl;
+        cout << "[ - ] Cantidad elementos en lista [ "<< nuevaLista->getCantidad() - 1 <<" ]"<<endl;
         cout << "[ - ] Cantidad de personas detectadas [ "<< found.end() - found.begin() <<" ]"<<endl;
         for(vector<Persona>::iterator i = found.begin(); i != found.end(); ++i)
         {
