@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/seba/Documentos/opencv/build",
+  "command": "/usr/bin/g++  -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/opencv.dir/main.cpp.o -c /home/seba/Documentos/opencv/main.cpp",
+  "file": "/home/seba/Documentos/opencv/main.cpp"
+},
+{
+  "directory": "/home/seba/Documentos/opencv/build",
+  "command": "/usr/bin/g++  -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/opencv.dir/Persona.cpp.o -c /home/seba/Documentos/opencv/Persona.cpp",
+  "file": "/home/seba/Documentos/opencv/Persona.cpp"
+},
+{
+  "directory": "/home/seba/Documentos/opencv/build",
+  "command": "/usr/bin/g++  -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/opencv.dir/Detector.cpp.o -c /home/seba/Documentos/opencv/Detector.cpp",
+  "file": "/home/seba/Documentos/opencv/Detector.cpp"
+},
+{
+  "directory": "/home/seba/Documentos/opencv/build",
+  "command": "/usr/bin/g++  -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/opencv.dir/Nodo.cpp.o -c /home/seba/Documentos/opencv/Nodo.cpp",
+  "file": "/home/seba/Documentos/opencv/Nodo.cpp"
+},
+{
+  "directory": "/home/seba/Documentos/opencv/build",
+  "command": "/usr/bin/g++  -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/opencv.dir/ListaEnlazada.cpp.o -c /home/seba/Documentos/opencv/ListaEnlazada.cpp",
+  "file": "/home/seba/Documentos/opencv/ListaEnlazada.cpp"
+}
+]

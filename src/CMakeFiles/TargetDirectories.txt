@@ -1,0 +1,3 @@
+/home/seba/Documentos/opencv/CMakeFiles/opencv.dir
+/home/seba/Documentos/opencv/CMakeFiles/edit_cache.dir
+/home/seba/Documentos/opencv/CMakeFiles/rebuild_cache.dir
