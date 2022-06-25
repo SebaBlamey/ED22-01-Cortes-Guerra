@@ -109,8 +109,6 @@ Indicar los libros, páginas web, documentos, etc. Utilizados en el trabajo. Por
 1. Pardo Herrera, C. J. (2019). HISTOGRAMA DE GRADIENTES ORIENTADOS PARA LA DETECCIÓN DE PEATONES (Python + OpenCV). Linkedin. Recuperado 24 de junio de 2022, de https://www.linkedin.com/pulse/detecci%C3%B3n-de-peatones-con-python-y-opencv-hog-svm-pardo-herrera/?originalSubdomain=es
 2. Bekios, J. (2021, 12 octubre). Taller-01: Instalación de las librerías de OpenCV para Visual Studio en C++. Youtube. Recuperado 24 de junio de 2022, de https://www.youtube.com/watch?v=Hu7ArOaFm2g
 3. Bekios, J. (2022, 10 junio). Ayudantía de Taller 2022–01 Clase 03-Parte 02/02: Detectar personas y calcular centroides en C++. Youtube. Recuperado 24 de junio de 2022, de https://www.youtube.com/watch?v=Y7AaLqLyJI8
-
-[instalacion de opencv en linux]
-https://medium.com/analytics-vidhya/how-to-install-opencv-for-visual-studio-code-using-ubuntu-os-9398b2f32d53
+4. Kathirkamar, V. (2021, 16 agosto). How to install OpenCV for C++ in Visual Studio code for Ubuntu OS. Medium. Recuperado 24 de junio de 2022, de https://medium.com/analytics-vidhya/how-to-install-opencv-for-visual-studio-code-using-ubuntu-os-9398b2f32d53
 
 
