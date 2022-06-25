@@ -1,13 +1,13 @@
 ![UCN](docs/images/60x60-ucn-negro.png)
 
 
-# Proyecto: Detección y reidentificación de caras en secuencias de imágenes o video
+# Proyecto: Detección personas en secuencias de imágenes o video
 ## Curso: Estructura de datos
 
 ### Integrantes
 
-* Sebastian Cortes Blamey (Programador)
-* Felipe Guerra Blamey (Programador)
+* Sebastián Cortés Blamey (Planificador)
+* Felipe Guerra Blamey (Coordinador)
 
 ### Bitácora
 

@@ -3,12 +3,12 @@
 
 # Informe Técnico 
 ## Curso: Estructura de datos
-### Detección y reidentificación de caras en secuencias de imágenes o video
+### Detección de personas en secuencias de imágenes o video
 
 **Alumnos:**
 
-* Sebastián Cortés Blamey (Programador)
-* Felipe Guerra Blamey (Programador)
+* Sebastián Cortés Blamey (Planificador)
+* Felipe Guerra Blamey (Coordinador)
 
 ## Resumen 
 
@@ -51,33 +51,34 @@ El IDE utilizado fue Visual Studio 2022 con la libreria de OPENCV con su version
 
 ### 2.2 Diseño 
 
-Explicar los componentes (módulos o clases) utilizados para resolver el problema. Indicar arquitectura propuesta, diagrama de clases u otro artefacto que estime conveniente para explicar el diseño de su implimentación.
+>Explicar los componentes (módulos o clases) utilizados para resolver el problema. Indicar arquitectura propuesta, diagrama de clases u otro artefacto que estime conveniente para explicar el diseño de su implimentación.
+![DIAGRAMA](images/diagrama.png)
+
+Cuando, en la clase Detector, se encuentra una persona, esta es enviada a la clase Persona, desde donde se crea el Nodo que a posterior sera ingresado en la ListaEnlazada.
 
 ### 2.3 Implementación
+#### Detector de personas
 
-Explicar brevemente algunos aspectos de implementación: Por ejemplo, detector de caras utilizado. Se pueden realizar pequeñas reseñas al código para indicar elementos importantes en el trabajo.
-
-Por ejemplo, 
-
-#### Detector de caras
-
-El detector de caras utilizado fue xxx. Para utilizarlo se debe.... El código para detectar una cara en una imagen se muestra a continuación:
-
+El detector de personas utilizado fue HOG, cuyas siglas en ingles significan "Histograma de Gradientes Orientadas". HOG detecta a las personas basandose en la estructura o forma del objeto. 
 ```c++
- 1. faceCascadePath = "./haarcascade_frontalface_default.xml";
- 2. faceCascade.load( faceCascadePath )
- 3. std::vector<Rect> faces;
- 4. faceCascade.detectMultiScale(frameGray, faces);
-
- 5. for ( size_t i = 0; i < faces.size(); i++ )
- 6. {
- 7.  int x1 = faces[i].x;
- 8.  int y1 = faces[i].y;
- 9.  int x2 = faces[i].x + faces[i].width;
-10.  int y2 = faces[i].y + faces[i].height;
-11. }
+1. vector<Rect> found;
+2. if (m == Default)
+3.     hog.detectMultiScale(img, found, 0, Size(2,2), Size(4,4), 1.05, 2, false);
+4. else if (m == Daimler)
+5.     hog_d.detectMultiScale(img, found, 1, Size(2,2), Size(4,4), 1.05, 3, true);
+6. vector<Persona> personas;
 ```
-La primera linea carga el archivo de entrenamiento... etc
+En la linea 1 se crea el vector "found" donde se estara contenido el objeto detectado el cual sera retornardo por las funciones de hog y hog_d, dependiendo de que modo se haya elegido.
+```c++
+7. for (vector<Rect>::iterator i = found.begin(); i != found.end(); ++i){
+8.      Rect &r = *i;
+9.      Persona p(r);
+10.     personas.push_back(p);
+11. }
+12. return personas;
+```
+Se entra en un ciclo for que se repetira por cada personas que se haya detectado. Y finalmente se retorna la persona.
+
 
 ## 3. Resultados obtenidos
 
