@@ -7,59 +7,47 @@
 
 **Alumnos:**
 
-* Alumno 01 (Rol)
-* Alumno 02 (Rol)
+* Sebastián Cortés Blamey (Programador)
+* Felipe Guerra Blamey (Programador)
 
 ## Resumen 
 
-> Agregar un resumen que describa el trabajo realizado y sus resultados. (Entre 150 y 180 palabras)
-> Más cosas...
-> El resumen indicarlo como cita con el comando `>`
+> La primera tarea comenzo creando un codigo el cual sera capáz de recibir un video encerrando a las personas que atraviesen una "zona" demarcada por una linea donde luego serán encerradas en un rectangulo el cual ayudara a distinguir a las personas unas de otras, estas personas antes mencionadas deben ser contadas una vez entran y salen del centro comercial mientras que a su vez se calcula la velocidad de estas según el parametro de personas por minuto. Una vez realizado este codigo se paso a la siguiente parte, donde se comienza a diferenciar a estas personas por sus diferentes caracteristicas fisicas, ya que la principal problematica del taller hasta el monmento es esta, lo cual se realizo según histogramas basados en el modelo de OpenCV HOG + Linear SVM ideado según el metodo de Dalal y Triggs el cual puede ser utilizado para realizar la deteccion de peatones tanto en imagenes como en secuencias de video.
 
 ## 1. Introducción
 
-La primera función de un reporte técnico es plasmar la información necesaria para que otras personas puedan reproducir el sistema propuesto o puedan entender su fucnionamiento . Para cumplir anterior se debe diferenciar claramente entre los artefactos de diseño e implementación. En el caso de un desarrollo tecnológico los algoritmos son importantes como componente de diseño y los programas generalmente son irrelevantes y deben resumidos o agregados en anexos en el documento. Los programas no son importantes en el documento, salvo si se quiere explicar conceptos expecíficos del lenguaje o del algoritmo implementado.
+Se sabe que en un centro comercial pueden entrar y salir diferentes personas de las cuales para el mismo centro le es importante saber cuantas pueden llegar a ser, ya que esto los ayudaria a llevar un registro de cuantas personas entraron y salieron durante un periodo de tiempo determinado. Es por esto que se crea un programa el cual se va a situar en un punto fijo y estrategico del centro comercial el cual va a tener captura de las personas que entran y salen sin tener una repetición de estas en caso de que una misma persona pueda entrar y salir en más de una o más oportunidades. Por otra parte, un dato importante para el mismo centro comercial es cuales son las horas con mayor ingreso y salida de persona para asi conocer el periodo de tiempo en el que se ocasiona más trafico de personas y por lo tanto mayor demanda para el centro comercial. 
 
-La redacción debe ser formal y de modo impersonal. No se debe utlizar primera persona del singular o plural. Se debe evitar el uso de cualquier calificativo sustituyéndolo siempre utilizando datos concretos y rastreables en documentos o publicaciones a través de referencias bibliográficas. Por ejemplo, no calificar algo como: "muy importante", "sustancial", "muy usadoo" o "mucho mejor".
-
-Las comparaciones deben concretarse con hechos y datos, sin frases ambiguas o términos generales. Por ejemplo, nunca se debe redactar frases como "el método es mejor que el método B". Lo correcto es decir, el error promedio de el método A es de 5 %, correspondiendo a la mitad del error de 10% obtenido utilizando el método B". El tiempo verbal es usualmente presente. No se debe perder de vista que se está explicando ”como hacer algo”, en vez de ”qué se hizo”. Todo aspecto circunstancial es irrelevante para el documento. Por ejemplo, si se ha desarrollado en el laboratorio X, o en el curso Y, con el profesor Z, etc.
 
 ### 1.1 Descripción del problema
 
-Dado el laboratorio describir como se entiende el problema bajo sus propias palabras.
+Según lo indicado en el laboratorio, un local/centro comercial necesita saber cuantas personas ingresan a este mismo y la forma más facil es realizando un programa en el que haga todo de forma automatica y así poder llevar un registro de estos mismos.
 
 ### 1.2 Objetivos 
 
 **Objetivo General**
 
-El fin que se desea llegar. (Comenzar con un verbo: "Construir un sistema...", "Desarrollar un sistema...", etc)
+Calcular la entrada y salida de personas dentro de un centro comercial sin que estas se repitan en la contabilidad.
+
 
 **Objetivos específicos**
 
-1. Objetivo 1
-2. Objetivo 2
-3. Objetivos 3
-
-Los objetivos específicos son acciones específicas que son desarrolladas para lograr cumplir el objetivo general, por ejemplo:
-
-1. Investigar  el  estado  del  arte  de  visión  por  computador  y  audio  para  resolver  tareas de  clasificación unimodal y multimodal aplicado  al  problema  de  reconocimiento  de emociones.
-2.  Seleccionar  uno  o  dos  métodos  estudiados  en  el  estado  del  arte  para  la  estimación  de  laemoción utilizando datos unimodales o multimodales.
-3.  Implementar los métodos seleccionados utilizando el lenguaje de programación Python y laslibrerías suministradas por Pytorch.
-4.  Validar  los  resultados  por  medio  bases  de  datos  especializadas  para  el  desarrollo  deaplicaciones basadas en la estimación de la emoción y que incluyan varios modos de atributoscomo: imágenes, sonido y/o texto.
-5.  Proponer  mejoras  a  los  modelos  implementados  para  mejorar  su  desempeño  en  futurasimplementaciones o proyectos de investigación.
-6.  Difundir los resultados en medios científicos nacionales o internacionales.
+1. Desarrollar un programa capaz de detectar a las personas que pasan por video.
+2. Categorizar a las personas, es decir, diferenciarlas unas de otras.
+3. Registrar las diferentes personas que ingresan al local.
+4. Implementar el reconocimiento de objetos según el histograma realizado según el modelo de HOG+Linear SVM.
 
 ### 1.3 Solución propuesta
 
-Esbozo de la solución propuesta, se espera que esta vaya evolucionando a medida que se avanza en el proyecto.
+La solución propuesta se baso en diferenciar a las personas según histogramas y las distancias que tenian estas mismas una de otras siendo agregadas de forma unica a listas enlazadas.
 
 ## 2. Materiales y métodos
 
-Explicar brevemente como se espera desarrollar el trabajo de implementación.
+El trabajo se desea realizar utilizando Visual Studio y OpenCV basandonos en diferentes ideas basadas en Python y sus distintas librerias dirigidas al trabajo de detectar distintos objetos.
 
 ### 2.1 Instalación
 
-Describir brevemente las librerías utilizadas para la instalación y programas utilizados para la ejecución del código. (Agregar una sección de anexo para describir como fueron instaladas las librerías de OpenCV y la IDE utilzada para el trabajo)
+El IDE utilizado fue Visual Studio 2022 con la libreria de OPENCV con su version 4.6.0 instaladas en el sistema operativo Linux.
 
 ### 2.2 Diseño 
 
@@ -93,7 +81,12 @@ La primera linea carga el archivo de entrenamiento... etc
 
 ## 3. Resultados obtenidos
 
+El resultado obtenido fue contar con el conocimiento de cuantas personas entraron y salieron al centro comercial según la zona demarcada.
+
 ## 4. Conclusiones
+
+Culminado el taller podemos llegar a tener un pequeño conocimiento de lo que se trata en un pequeño rango la Vision artificial y el procesamiento de imagen ya que trabajamos con detectar a distintas personas diferenciando a unas de otras y contabilizando a estas mismas según una zona demarcada y asi ver de una forma optima cual podria llegar a ser la hora peak de un centro comercial, buscar y encontrar a cierta persona, etc.
+
 
 # Anexos
 
@@ -101,11 +94,14 @@ La primera linea carga el archivo de entrenamiento... etc
 
 ## Anexo B: Instalación de IDE y configuración librerías OpenCV
 
+## Anexo C: Conocimiento del modelo de OpenCV HOG + Linear SVM
+
 # Referecia
 
 Indicar los libros, páginas web, documentos, etc. Utilizados en el trabajo. Por ejemplo:
 
-1. MONTERO, J.,Metodos matemáticos aplicados a la ganadería.3aed. Sevilla: Ediciones de la pradera,2007.
-2. LVARADO,   J.   P.,¿Qué   debe   contener   un   artículo   científico?.http://www.ie.tec.ac.cr/palvarado/pmwiki/index.php/MSc/Art\%c3\%adculoCient\%c3\%adfico. Fe-cha de acceso:13/Nov/2018
+1. Pardo Herrera, C. J. (2019). HISTOGRAMA DE GRADIENTES ORIENTADOS PARA LA DETECCIÓN DE PEATONES (Python + OpenCV). Linkedin. Recuperado 24 de junio de 2022, de https://www.linkedin.com/pulse/detecci%C3%B3n-de-peatones-con-python-y-opencv-hog-svm-pardo-herrera/?originalSubdomain=es
+2. Bekios, J. (2021, 12 octubre). Taller-01: Instalación de las librerías de OpenCV para Visual Studio en C++. Youtube. Recuperado 24 de junio de 2022, de https://www.youtube.com/watch?v=Hu7ArOaFm2g
+3.Bekios, J. (2022, 10 junio). Ayudantía de Taller 2022–01 Clase 03-Parte 02/02: Detectar personas y calcular centroides en C++. Youtube. Recuperado 24 de junio de 2022, de https://www.youtube.com/watch?v=Y7AaLqLyJI8
 
 
