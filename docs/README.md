@@ -43,11 +43,11 @@ La solución propuesta se baso en diferenciar a las personas según histogramas 
 
 ## 2. Materiales y métodos
 
-El trabajo se desea realizar utilizando Visual Studio y OpenCV basandonos en diferentes ideas basadas en Python y sus distintas librerias dirigidas al trabajo de detectar distintos objetos.
+El trabajo se desea realizar utilizando Visual Studio Code y OpenCV basandonos en diferentes ideas basadas en Python y sus distintas librerias dirigidas al trabajo de detectar distintos objetos.
 
 ### 2.1 Instalación
 
-El IDE utilizado fue Visual Studio 2022 con la libreria de OPENCV con su version 4.6.0 instaladas en el sistema operativo Linux.
+El IDE utilizado fue Visual Studio Code con la libreria de OPENCV con su version 4.6.0 instaladas en el sistema operativo Linux.
 
 ### 2.2 Diseño 
 
@@ -92,10 +92,15 @@ Culminado el taller podemos llegar a tener un pequeño conocimiento de lo que se
 # Anexos
 
 ## Anexo A: Instalación librerías OpenCV
+![DIAGRAMA](images/opencvW.png)
+En el caso de Windows descargamos las librerias de OpenCV desde su pagina oficial (https://opencv.org/) y seguimos la guia subida por nuestro profesor. 
+
+En el caso de Linux la instalacion fue un poco mas complicada, ya que la misma varia en cada distribucion y su sistema de paqueteria, para lograr la instalacion utilizamos una guia orientada a Ubuntu y nosotros la adapatamos a Arch Linux.  
 
 ## Anexo B: Instalación de IDE y configuración librerías OpenCV
+![DIAGRAMA](images/vsW.png)
+Utilizamos como IDE el editor de codigo Visual Studio Code, el cual puede ser descargado de su pagina oficial en Windows, mientras que en Linux se instala mediante el sistema de paqueteria de la distribucion. Para instalar las librerias en Windows seguimos el tutorial que nos brindo nuestro profesor, mientras en Linux debimos buscar guias en internet ya que se nos dificulto mucho hacer que el proyecto utilizara las librerias. 
 
-## Anexo C: Conocimiento del modelo de OpenCV HOG + Linear SVM
 
 # Referecia
 
@@ -103,6 +108,9 @@ Indicar los libros, páginas web, documentos, etc. Utilizados en el trabajo. Por
 
 1. Pardo Herrera, C. J. (2019). HISTOGRAMA DE GRADIENTES ORIENTADOS PARA LA DETECCIÓN DE PEATONES (Python + OpenCV). Linkedin. Recuperado 24 de junio de 2022, de https://www.linkedin.com/pulse/detecci%C3%B3n-de-peatones-con-python-y-opencv-hog-svm-pardo-herrera/?originalSubdomain=es
 2. Bekios, J. (2021, 12 octubre). Taller-01: Instalación de las librerías de OpenCV para Visual Studio en C++. Youtube. Recuperado 24 de junio de 2022, de https://www.youtube.com/watch?v=Hu7ArOaFm2g
-3.Bekios, J. (2022, 10 junio). Ayudantía de Taller 2022–01 Clase 03-Parte 02/02: Detectar personas y calcular centroides en C++. Youtube. Recuperado 24 de junio de 2022, de https://www.youtube.com/watch?v=Y7AaLqLyJI8
+3. Bekios, J. (2022, 10 junio). Ayudantía de Taller 2022–01 Clase 03-Parte 02/02: Detectar personas y calcular centroides en C++. Youtube. Recuperado 24 de junio de 2022, de https://www.youtube.com/watch?v=Y7AaLqLyJI8
+
+[instalacion de opencv en linux]
+https://medium.com/analytics-vidhya/how-to-install-opencv-for-visual-studio-code-using-ubuntu-os-9398b2f32d53
 
 
