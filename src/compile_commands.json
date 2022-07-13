@@ -23,5 +23,10 @@
   "directory": "/home/seba/Documentos/opencv/build",
   "command": "/usr/bin/g++  -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/opencv.dir/ListaEnlazada.cpp.o -c /home/seba/Documentos/opencv/ListaEnlazada.cpp",
   "file": "/home/seba/Documentos/opencv/ListaEnlazada.cpp"
+},
+{
+  "directory": "/home/seba/Documentos/opencv/build",
+  "command": "/usr/bin/g++  -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/opencv.dir/BinarySearchTree.cpp.o -c /home/seba/Documentos/opencv/BinarySearchTree.cpp",
+  "file": "/home/seba/Documentos/opencv/BinarySearchTree.cpp"
 }
 ]

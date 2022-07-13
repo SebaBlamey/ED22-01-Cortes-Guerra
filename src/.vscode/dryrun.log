@@ -1,0 +1,31 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/seba/Documentos/TallerEstructura/ED22-01-Cortes-Guerra/src'
+/var/lib/snapd/snap/cmake/1088/bin/cmake -S/home/seba/Documentos/opencv -B/home/seba/Documentos/opencv --check-build-system CMakeFiles/Makefile.cmake 0
+/var/lib/snapd/snap/cmake/1088/bin/cmake -E cmake_progress_start /home/seba/Documentos/opencv/CMakeFiles /home/seba/Documentos/opencv//CMakeFiles/progress.marks
+make -s -f CMakeFiles/Makefile2 all
+make[1]: Entering directory '/home/seba/Documentos/TallerEstructura/ED22-01-Cortes-Guerra/src'
+make -s -f CMakeFiles/opencv.dir/build.make CMakeFiles/opencv.dir/depend
+make[2]: Entering directory '/home/seba/Documentos/TallerEstructura/ED22-01-Cortes-Guerra/src'
+cd /home/seba/Documentos/opencv && /var/lib/snapd/snap/cmake/1088/bin/cmake -E cmake_depends "Unix Makefiles" /home/seba/Documentos/opencv /home/seba/Documentos/opencv /home/seba/Documentos/opencv /home/seba/Documentos/opencv /home/seba/Documentos/opencv/CMakeFiles/opencv.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/seba/Documentos/TallerEstructura/ED22-01-Cortes-Guerra/src'
+make -s -f CMakeFiles/opencv.dir/build.make CMakeFiles/opencv.dir/build
+ 
+make[2]: Entering directory '/home/seba/Documentos/TallerEstructura/ED22-01-Cortes-Guerra/src'
+/var/lib/snapd/snap/cmake/1088/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/seba/Documentos/opencv/CMakeFiles --progress-num=1 "Building CXX object CMakeFiles/opencv.dir/main.cpp.o"
+/usr/bin/c++  -isystem /usr/local/include/opencv4 -std=gnu++11 -MD -MT CMakeFiles/opencv.dir/main.cpp.o -MF CMakeFiles/opencv.dir/main.cpp.o.d -o CMakeFiles/opencv.dir/main.cpp.o -c /home/seba/Documentos/opencv/main.cpp
+/var/lib/snapd/snap/cmake/1088/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/seba/Documentos/opencv/CMakeFiles --progress-num=2 "Building CXX object CMakeFiles/opencv.dir/Persona.cpp.o"
+/usr/bin/c++  -isystem /usr/local/include/opencv4 -std=gnu++11 -MD -MT CMakeFiles/opencv.dir/Persona.cpp.o -MF CMakeFiles/opencv.dir/Persona.cpp.o.d -o CMakeFiles/opencv.dir/Persona.cpp.o -c /home/seba/Documentos/opencv/Persona.cpp
+/var/lib/snapd/snap/cmake/1088/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/seba/Documentos/opencv/CMakeFiles --progress-num=3 "Building CXX object CMakeFiles/opencv.dir/Detector.cpp.o"
+/usr/bin/c++  -isystem /usr/local/include/opencv4 -std=gnu++11 -MD -MT CMakeFiles/opencv.dir/Detector.cpp.o -MF CMakeFiles/opencv.dir/Detector.cpp.o.d -o CMakeFiles/opencv.dir/Detector.cpp.o -c /home/seba/Documentos/opencv/Detector.cpp
+/var/lib/snapd/snap/cmake/1088/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/seba/Documentos/opencv/CMakeFiles --progress-num=4 "Building CXX object CMakeFiles/opencv.dir/Nodo.cpp.o"
+/usr/bin/c++  -isystem /usr/local/include/opencv4 -std=gnu++11 -MD -MT CMakeFiles/opencv.dir/Nodo.cpp.o -MF CMakeFiles/opencv.dir/Nodo.cpp.o.d -o CMakeFiles/opencv.dir/Nodo.cpp.o -c /home/seba/Documentos/opencv/Nodo.cpp
+/var/lib/snapd/snap/cmake/1088/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/seba/Documentos/opencv/CMakeFiles --progress-num=5 "Building CXX object CMakeFiles/opencv.dir/ListaEnlazada.cpp.o"
+/usr/bin/c++  -isystem /usr/local/include/opencv4 -std=gnu++11 -MD -MT CMakeFiles/opencv.dir/ListaEnlazada.cpp.o -MF CMakeFiles/opencv.dir/ListaEnlazada.cpp.o.d -o CMakeFiles/opencv.dir/ListaEnlazada.cpp.o -c /home/seba/Documentos/opencv/ListaEnlazada.cpp
+/var/lib/snapd/snap/cmake/1088/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/home/seba/Documentos/opencv/CMakeFiles --progress-num=6 "Linking CXX executable opencv"
+/var/lib/snapd/snap/cmake/1088/bin/cmake -E cmake_link_script CMakeFiles/opencv.dir/link.txt --verbose=
+make[2]: Leaving directory '/home/seba/Documentos/TallerEstructura/ED22-01-Cortes-Guerra/src'
+/var/lib/snapd/snap/cmake/1088/bin/cmake -E cmake_echo_color --switch= --progress-dir=/home/seba/Documentos/opencv/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target opencv"
+make[1]: Leaving directory '/home/seba/Documentos/TallerEstructura/ED22-01-Cortes-Guerra/src'
+/var/lib/snapd/snap/cmake/1088/bin/cmake -E cmake_progress_start /home/seba/Documentos/opencv/CMakeFiles 0
+make: Leaving directory '/home/seba/Documentos/TallerEstructura/ED22-01-Cortes-Guerra/src'
+ 

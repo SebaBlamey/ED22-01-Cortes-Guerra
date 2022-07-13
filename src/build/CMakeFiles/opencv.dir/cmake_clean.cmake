@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/opencv.dir/BinarySearchTree.cpp.o"
+  "CMakeFiles/opencv.dir/BinarySearchTree.cpp.o.d"
   "CMakeFiles/opencv.dir/Detector.cpp.o"
   "CMakeFiles/opencv.dir/Detector.cpp.o.d"
   "CMakeFiles/opencv.dir/ListaEnlazada.cpp.o"

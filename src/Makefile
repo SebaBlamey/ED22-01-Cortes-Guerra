@@ -129,6 +129,30 @@ opencv/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/opencv.dir/build.make CMakeFiles/opencv.dir/build
 .PHONY : opencv/fast
 
+BinarySearchTree.o: BinarySearchTree.cpp.o
+.PHONY : BinarySearchTree.o
+
+# target to build an object file
+BinarySearchTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opencv.dir/build.make CMakeFiles/opencv.dir/BinarySearchTree.cpp.o
+.PHONY : BinarySearchTree.cpp.o
+
+BinarySearchTree.i: BinarySearchTree.cpp.i
+.PHONY : BinarySearchTree.i
+
+# target to preprocess a source file
+BinarySearchTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opencv.dir/build.make CMakeFiles/opencv.dir/BinarySearchTree.cpp.i
+.PHONY : BinarySearchTree.cpp.i
+
+BinarySearchTree.s: BinarySearchTree.cpp.s
+.PHONY : BinarySearchTree.s
+
+# target to generate assembly for a file
+BinarySearchTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opencv.dir/build.make CMakeFiles/opencv.dir/BinarySearchTree.cpp.s
+.PHONY : BinarySearchTree.cpp.s
+
 Detector.o: Detector.cpp.o
 .PHONY : Detector.o
 
@@ -258,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... opencv"
+	@echo "... BinarySearchTree.o"
+	@echo "... BinarySearchTree.i"
+	@echo "... BinarySearchTree.s"
 	@echo "... Detector.o"
 	@echo "... Detector.i"
 	@echo "... Detector.s"

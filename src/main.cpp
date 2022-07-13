@@ -27,13 +27,16 @@ int main(int argc, char** argv)
     }
     else
     {
-        cout << "[ - ] Imagen encontrada\n[ - ] Lista enlazada" << endl;
+        cout << "[ - ] Imagen encontrada" << endl;
+        int opcion = 2;
         ListaEnlazada* nuevaLista = new ListaEnlazada();
-        vector<Persona> found = detector.detect(frame, nuevaLista);
+        vector<Persona> found = detector.detect(frame, nuevaLista,opcion);
         int numeroPersona = 1;
         Nodo* current = nuevaLista->getFirst();
+        if(opcion == 1 ) cout << "[ - ] Lista enlazada" << endl;
+        else if(opcion == 2) cout << "[ - ] Arboles binarios" << endl;
         cout << "[ - ] Cantidad elementos en lista [ "<< nuevaLista->getCantidad() - 1 <<" ]"<<endl;
-        cout << "[ - ] Cantidad de personas detectadas [ "<< found.end() - found.begin() <<" ]"<<endl;
+        cout << "[ - ] Cantidad de personas detectadas [ "<< found.end() - found.begin() <<" ]\n"<<endl;
         for(vector<Persona>::iterator i = found.begin(); i != found.end(); ++i)
         {
             cout << "Persona numero: "<< to_string(numeroPersona) << endl;
@@ -49,6 +52,7 @@ int main(int argc, char** argv)
         }
 
         imshow("People detector",frame);
+
         waitKey(0);
     }
 

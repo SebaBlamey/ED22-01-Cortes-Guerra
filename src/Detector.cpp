@@ -6,6 +6,7 @@
 #include <iostream>
 #include <iomanip>
 #include "ListaEnlazada.hpp"
+#include "BinarySearchTree.hpp"
 
 using namespace cv;
 using namespace std;
@@ -17,7 +18,7 @@ void Detector::toggleMode() { m = (m == Default ? Daimler : Default); }
     
 string Detector::modeName() const { return (m == Default ? "Default" : "Daimler"); }
 
-vector<Persona> Detector::detect(InputArray img, ListaEnlazada* lista)
+vector<Persona> Detector::detect(InputArray img, ListaEnlazada* lista, int opcion)
 {
         // Run the detector with default parameters. to get a higher hit-rate
         // (and more false alarms, respectively), decrease the hitThreshold and
@@ -39,30 +40,46 @@ vector<Persona> Detector::detect(InputArray img, ListaEnlazada* lista)
 
             bool iguales= false;
 
-            // ListaEnlazada
-            Nodo* current = lista->getFirst();
-            if(current == NULL)
+            if(opcion == 1 )
             {
-                lista->anadir(resizedDown.clone(),0,0);
-            }
-            else
-            {
-                while(current != NULL)
+                // ListaEnlazada
+                
+                Nodo* current = lista->getFirst();
+                if(current == NULL)
                 {
-                    double dist = norm(resizedDown, current->getImg(), NORM_L2);
-                    cout << "Distancia: "<< dist<< endl;
-                    if(dist<0.0)
+                    lista->anadir(resizedDown.clone(),0,0);
+                }
+                else
+                {
+                    while(current != NULL)
                     {
-                        iguales = true;
-                        current->setVeces(current->getVeces() + 1);
-                        break;
+                        double dist = norm(resizedDown, current->getImg(), NORM_L2);
+                        cout << "Distancia: "<< dist<< endl;
+                        if(dist<0.0)
+                        {
+                            iguales = true;
+                            current->setVeces(current->getVeces() + 1);
+                            break;
+                        }
+                        current = current->getNext();
                     }
-                    current = current->getNext();
+                }
+                if(iguales!=true)
+                {
+                    lista->anadir(resizedDown.clone(),0,0);
                 }
             }
-            if(iguales!=true)
+            else if (opcion == 2)
             {
-                lista->anadir(resizedDown.clone(),0,0);
+                // Arboles binarios
+                BinarySearchTree abb;
+                ListaEnlazada* cuerpos = new ListaEnlazada();
+
+                Nodo* current = cuerpos->getFirst();
+                while(current != nullptr){
+                    abb.insertI(current->getImg());
+                    current = current -> getNext();
+                }
             }
         }
         

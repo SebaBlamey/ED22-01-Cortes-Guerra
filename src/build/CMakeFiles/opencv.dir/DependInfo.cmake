@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/seba/Documentos/opencv/BinarySearchTree.cpp" "CMakeFiles/opencv.dir/BinarySearchTree.cpp.o" "gcc" "CMakeFiles/opencv.dir/BinarySearchTree.cpp.o.d"
   "/home/seba/Documentos/opencv/Detector.cpp" "CMakeFiles/opencv.dir/Detector.cpp.o" "gcc" "CMakeFiles/opencv.dir/Detector.cpp.o.d"
   "/home/seba/Documentos/opencv/ListaEnlazada.cpp" "CMakeFiles/opencv.dir/ListaEnlazada.cpp.o" "gcc" "CMakeFiles/opencv.dir/ListaEnlazada.cpp.o.d"
   "/home/seba/Documentos/opencv/Nodo.cpp" "CMakeFiles/opencv.dir/Nodo.cpp.o" "gcc" "CMakeFiles/opencv.dir/Nodo.cpp.o.d"

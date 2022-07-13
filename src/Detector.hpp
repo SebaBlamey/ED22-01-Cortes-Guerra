@@ -32,7 +32,7 @@ public:
 
     string modeName() const;
 
-    vector<Persona> detect(InputArray img, ListaEnlazada* lista);
+    vector<Persona> detect(InputArray img, ListaEnlazada* lista, int opcion);
 
     void adjustRect(Rect & r) const;
 };
