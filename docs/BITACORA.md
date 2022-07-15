@@ -8,4 +8,5 @@
 | 12/JUN | OBJ-02    | Encerrar a las personas con un rectangulo rojo | Sebastián Cortés | 1 hora | 1 hora 30 min |
 | 17/JUN | OBJ-03    | Contar a las personas que entran y salen por una zona | Sebastián Cortes | 2 horas | 3 horas |
 | 20/JUN | OBJ-04    | Calcular velocidad de personas que entran y salen | Felipe Guerra | 2 horas | 2 horas 30 min |
-| 23/JUN | OBJ-05    | Diferenciar a las personas | 3 horas | Sebastián Cortés | 3 horas | 3 horas |
+| 10/JUL | OBJ-05    | Incluir Arboles Binarios | Sebastián Cortés | 3 horas | 1 hora 30 min |
+| 13/JUL | OBJ-06    | Configurar la camara de video | Felipe Guerra | 2 horas | 3 horas |
