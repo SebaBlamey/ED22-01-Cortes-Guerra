@@ -2171,8 +2171,16 @@ CMakeFiles/opencv.dir/main.cpp.o: main.cpp \
   /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
   /usr/local/include/opencv4/opencv2/video.hpp \
   /usr/local/include/opencv4/opencv2/video/tracking.hpp \
-  /usr/local/include/opencv4/opencv2/video/background_segm.hpp
+  /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
+  /usr/include/c++/12.1.0/filesystem \
+  /usr/include/dirent.h \
+  /usr/include/bits/dirent.h \
+  /usr/include/bits/dirent_ext.h
 
+
+/usr/include/dirent.h:
+
+/usr/include/c++/12.1.0/filesystem:
 
 Persona.cpp:
 
@@ -2240,6 +2248,8 @@ Detector.hpp:
 
 /usr/local/include/opencv4/opencv2/flann/dist.h:
 
+/usr/include/bits/dirent.h:
+
 /usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h:
 
 /usr/include/c++/12.1.0/queue:
@@ -2261,6 +2271,8 @@ Detector.hpp:
 ListaEnlazada.cpp:
 
 /usr/local/include/opencv4/opencv2/flann.hpp:
+
+/usr/include/bits/dirent_ext.h:
 
 /usr/local/include/opencv4/opencv2/flann/random.h:
 

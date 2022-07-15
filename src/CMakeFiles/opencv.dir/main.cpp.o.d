@@ -324,4 +324,6 @@ CMakeFiles/opencv.dir/main.cpp.o: /home/seba/Documentos/opencv/main.cpp \
  /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
  /usr/local/include/opencv4/opencv2/video.hpp \
  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
- /usr/local/include/opencv4/opencv2/video/background_segm.hpp
+ /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
+ /usr/include/c++/12.1.0/filesystem /usr/include/dirent.h \
+ /usr/include/bits/dirent.h /usr/include/bits/dirent_ext.h

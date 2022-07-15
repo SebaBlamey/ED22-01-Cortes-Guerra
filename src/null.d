@@ -1,2 +1,1 @@
-CMakeFiles/opencv.dir/Detector.cpp.o: /dev/null \
- /usr/include/stdc-predef.h
+CMakeFiles/opencv.dir/Persona.cpp.o: /dev/null /usr/include/stdc-predef.h

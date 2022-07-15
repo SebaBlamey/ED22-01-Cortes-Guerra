@@ -15,6 +15,9 @@
 using namespace std;
 using namespace cv;
 
+
+
+
 void desplegarMenu(){
     cout << "-------------------------------------------"<<endl;
     cout << " -- MENU --" << endl;
@@ -29,14 +32,17 @@ void desplegarMenuEstructura(){
     cout << "-------------------------------------------"<<endl;
 }
 
+#include <dirent.h>
 int main(int argc, char** argv)
 {
+    // Se inicializa el detector de cuerpos.
     Detector detector;
     Mat frame;
     string framePath = "/home/seba/Documentos/opencv/images/image1680.png";
-    string imagesPath = "/home/seba/Documentos/opencv/images/";
+    const char* imagePath = "/home/seba/Documentos/opencv/images/";
     frame = imread(framePath);
     detector.toggleMode();
+    // En caso que la ruta entregada no exista retorna este mensaje.
     if (frame.empty())
     {
         cout << "[ ! ] Imagen no encontrada" << endl;  
@@ -56,6 +62,28 @@ int main(int argc, char** argv)
             cout << "Seleccione su opcion -> ";
             cin >> opcionUsuario;
         }
+        if(opcionUsuario == 1) // Administrador
+        {
+            string pass = "";
+            cout << "Ingrese la contrasena -> ";
+            cin >> pass;
+            if(pass == "ADMIN"){ 
+                cout << "Las imagenes que registra la camara de seguridad son: " << endl;
+                /* Se recorre el directorio dado y se despliegan los archivos 
+                 * que hay en su interior
+                */
+                DIR *dir;
+                struct dirent *ent;
+                if ((dir = opendir (imagePath)) != NULL) {
+                    while((ent = readdir (dir)) != NULL){
+                        cout << ent->d_name << endl;
+                    }
+                    closedir(dir);
+                }
+            }else{
+                cout << "Contrasena incorrecta" << endl;
+            }
+        }
         if(opcionUsuario == 2) // Guardia
         {
             desplegarMenuEstructura();
@@ -72,11 +100,14 @@ int main(int argc, char** argv)
             {
                 cout << "[ - ] Lista Enlazada"<< endl;
                 ListaEnlazada* nuevaLista = new ListaEnlazada();
+                // Se registran las personas ingresadas en la imagen.
                 vector<Persona> found = detector.detect(frame, nuevaLista,opcionEstructura);
                 int numeroPersona = 1;
                 Nodo* current = nuevaLista->getFirst();
                 cout << "[ - ] Cantidad elementos en lista [ "<< nuevaLista->getCantidad() - 1 <<" ]"<<endl;
                 cout << "[ - ] Cantidad de personas detectadas [ "<< found.end() - found.begin() <<" ]\n"<<endl;
+                cout << "[ - ] Cantidad de personas por hora -> " << found.end() - found.begin() << endl;
+                // Por cada persona registrada se dibuja su rectangulo
                 for(vector<Persona>::iterator i = found.begin(); i != found.end(); ++i)
                 {
                     cout << "Persona numero: "<< to_string(numeroPersona) << endl;
@@ -99,10 +130,13 @@ int main(int argc, char** argv)
             {
                 cout << "[ - ] Arboles Binarios" << endl;
                 ListaEnlazada* nuevaLista = new ListaEnlazada();
+                // Se registran las personas ingresadas en la imagen.
                 vector<Persona> found = detector.detect(frame, nuevaLista,opcionEstructura);
                 int numeroPersona = 1;
                 Nodo* current = nuevaLista->getFirst();
                 cout << "[ - ] Cantidad de personas detectadas [ "<< found.end() - found.begin() <<" ]\n"<<endl;
+                cout << "[ - ] Cantidad de personas por hora -> " << found.end() - found.begin() << "\n" <<endl;
+                // Por cada persona registrada se dibuja su rectangulo
                 for(vector<Persona>::iterator i = found.begin(); i != found.end(); ++i)
                 {
                     cout << "Persona numero: "<< to_string(numeroPersona) << endl;
@@ -122,31 +156,6 @@ int main(int argc, char** argv)
                 waitKey(0);
             }
         }
-        /*ListaEnlazada* nuevaLista = new ListaEnlazada();
-        vector<Persona> found = detector.detect(frame, nuevaLista,opcion);
-        int numeroPersona = 1;
-        Nodo* current = nuevaLista->getFirst();
-        if(opcion == 1 ) cout << "[ - ] Lista enlazada" << endl;
-        else if(opcion == 2) cout << "[ - ] Arboles binarios" << endl;
-        cout << "[ - ] Cantidad elementos en lista [ "<< nuevaLista->getCantidad() - 1 <<" ]"<<endl;
-        cout << "[ - ] Cantidad de personas detectadas [ "<< found.end() - found.begin() <<" ]\n"<<endl;
-        for(vector<Persona>::iterator i = found.begin(); i != found.end(); ++i)
-        {
-            cout << "Persona numero: "<< to_string(numeroPersona) << endl;
-            Persona &p = *i;
-            cout << "(" << p.getXComienzo() << ", " << p.getYComienzo() << ") "<<endl;
-            cout << endl;
-            rectangle(frame, Point(p.getXComienzo(), p.getYComienzo()), Point(p.getXFin(), p.getYFin()), cv::Scalar(0, 255, 0), 2);
-            circle(frame, Point(p.getXCentro(), p.getYCentro()), 3, Scalar(0, 0, 255), 3);
-            circle(frame, Point(p.getXComienzo(), p.getYComienzo()), 3, Scalar(255, 0, 255), 2);
-            circle(frame, Point(p.getXFin(), p.getYFin()), 3, Scalar(0, 255, 255), 2);
-
-            numeroPersona++;
-        }
-
-        imshow("People detector",frame);
-
-        waitKey(0);*/
     }
     return 0;
 }

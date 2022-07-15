@@ -56,35 +56,3 @@ void ListaEnlazada::anadir(Nodo* nuevo)
     }
     cantidad++;
 }
-void ListaEnlazada::ordenar2()
-{
-    Nodo* actual = first;
-    Nodo* siguiente = first;
-    int t;
-    Mat img;
-    int id;
-
-    while (actual -> getNext() != NULL)
-    {
-        siguiente = actual->getNext();
-
-        while(siguiente != NULL)
-        {
-            if (actual->getVeces() > siguiente->getVeces())
-            {
-                t = siguiente->getVeces();
-                id = siguiente->getId();
-                img = siguiente->getImg();
-                siguiente->setVeces(actual->getVeces());
-                siguiente->setId(actual->getId());
-                siguiente->setImg(actual->getImg());
-                actual->setVeces(t);
-                actual->setId(id);
-                actual->setImg(img);
-            }
-            siguiente = siguiente->getNext();
-        }
-        actual = actual->getNext();
-        siguiente = actual->getNext();
-    }
-}
