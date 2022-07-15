@@ -54,7 +54,6 @@ vector<Persona> Detector::detect(InputArray img, ListaEnlazada* lista, int opcio
                     while(current != NULL)
                     {
                         double dist = norm(resizedDown, current->getImg(), NORM_L2);
-                        cout << "Distancia: "<< dist<< endl;
                         if(dist<0.0)
                         {
                             iguales = true;
